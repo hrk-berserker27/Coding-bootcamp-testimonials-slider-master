@@ -1,0 +1,34 @@
+{
+  "dependencies": {
+    "next": "^12.2.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.54.8"
+  },
+  "name": "coding-bootcamp-testimonials-slider-master",
+  "description": "This is a slider built with NextJS",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hrk-berserker27/Coding-bootcamp-testimonials-slider-master"
+  },
+  "keywords": [
+    "NextJS",
+    "React",
+    "SASS",
+    "SCSS",
+    "Javascript slider",
+    "JSX",
+    "CSS3"
+  ],
+  "author": "Hritick Bhushan",
+  "license": "ISC"
+}
