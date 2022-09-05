@@ -16,8 +16,9 @@ $font-weight: (
     font-size: $size;
 }
 
-@mixin flex($x, $y) {
+@mixin flex($x, $y, $direction: row) {
     display: flex;
+    flex-direction: $direction;
     justify-content: $x;
     align-items: $y;
 }

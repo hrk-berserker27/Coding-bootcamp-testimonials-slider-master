@@ -3,6 +3,8 @@ import { useState } from "react";
 import Image from "next/image";
 import pic1 from "../public/images/image-tanya.jpg";
 import pic2 from "../public/images/image-john.jpg";
+import leftIcon from "../public/images/icon-prev.svg";
+import rightIcon from "../public/images/icon-next.svg";
 export default function App() {
   let data = [
     [
@@ -66,29 +68,41 @@ export default function App() {
         <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
       </Head>
       <main>
-        <div className="image-container">
-          <Image
-            alt="writer-image"
-            src={setImage()}
-            layout="fill"
-            placeholder="blur"
-          />
-        </div>
-
-        <p className="review">
-          <span className="quotes">“&nbsp;{setQuote()}&nbsp;”</span>
-        </p>
-        <div className="writer-container">
-          <div className="writer">{setName()}</div>
-          <div className="writer-profession">{setProfession()}</div>
+        <div class="content-section">
+          <p className="review">
+            <span className="quotes">“&nbsp;{setQuote()}&nbsp;”</span>
+          </p>
+          <div className="writer-container">
+            <div className="writer">{setName()}</div>
+            <div className="writer-profession">{setProfession()}</div>
+          </div>
         </div>
         <div className="hero-section">
+          <div className="image-container">
+            <Image
+              alt="writer-image"
+              src={setImage()}
+              layout="fill"
+              placeholder="blur"
+              loading="eager"
+            />
+          </div>
           <div className="slider-container">
             <button className="left" onClick={decrement}>
-              L
+              <Image
+                alt="left-icon"
+                src={leftIcon}
+                layout="intrinsic"
+                loading="eager"
+              />
             </button>
             <button className="right" onClick={increment}>
-              R
+              <Image
+                alt="right-icon"
+                src={rightIcon}
+                layout="intrinsic"
+                loading="eager"
+              />
             </button>
           </div>
         </div>

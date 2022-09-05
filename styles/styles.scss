@@ -8,7 +8,93 @@
 }
 
 .image-container {
-    width: 250px;
-    height: 250px;
+    width: 254px;
+    height: 252px;
     position: relative; //-> to make the layout property on Image component work we need mention this property on the parent element of the Image component
+}
+
+.hero-section {
+    position: relative;
+    width: 100%;
+    padding: 2em;
+    @include d.flex(center, center);
+    background: url(../public/images/pattern-bg.svg);
+    background-size: 86%;
+    background-position-x: 1.8em;
+    background-position-y: -0.4em;
+    background-repeat: no-repeat;
+    height: 305px;
+    padding-top: 1.7em;
+
+    .slider-container {
+        position: absolute;
+        top: 83%;
+        left: calc(50% - 2.5em);
+        width: 5em;
+        height: 2.6em;
+        border-radius: 2em;
+        @include d.flex(center, center);
+        overflow: hidden;
+
+        button {
+            height: 100%;
+            flex-basis: 100%;
+            position: relative;
+            background-color: white;
+            border: none;
+        }
+    }
+}
+
+
+main {
+    min-height: 100vh;
+    max-width: 100vw;
+    @include d.flex(flex-end, center, column);
+    flex-flow: column-reverse;
+    gap: 2em;
+    padding-top: 2em;
+    background: url(../public/images/pattern-curve.svg);
+    background-size: 75%;
+    background-repeat: no-repeat;
+    background-position-y: bottom;
+
+    .content-section {
+        width: 100%;
+        @include d.flex(flex-start, center, column);
+        text-align: center;
+        padding: 1em;
+        line-height: 1.5rem;
+        gap: 1.1em;
+        font-size: 1.1rem;
+
+        .review {
+            color: map-get(d.$color-bucket, "Dark_Blue");
+            width: 28ch;
+            position: relative;
+
+            &::before {
+                content: url(../public/images/pattern-quotes.svg);
+                position: absolute;
+                top: -15%;
+                left: 40%;
+                zoom: 50%;
+            }
+        }
+
+        .writer-container {
+            .writer {
+                @include d.fontWeightSelector(map-get(d.$font-weight, "weight-3"));
+                color: map-get(d.$color-bucket, "Dark_Blue");
+                font-size: 0.95rem;
+                line-height: 1.2rem;
+            }
+
+            .writer-profession {
+                color: map-get(d.$color-bucket, "Grayish_Blue");
+                font-size: 0.9rem;
+            }
+        }
+    }
+
 }
