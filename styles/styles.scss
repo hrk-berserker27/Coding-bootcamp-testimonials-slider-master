@@ -4,4 +4,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    @include d.fontFamily;
+}
+
+.image-container {
+    width: 250px;
+    height: 250px;
+    position: relative; //-> to make the layout property on Image component work we need mention this property on the parent element of the Image component
 }

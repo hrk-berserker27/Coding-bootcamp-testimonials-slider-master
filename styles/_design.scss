@@ -26,3 +26,7 @@ $font-weight: (
     display: grid;
     place-items: center;
 }
+
+@mixin fontFamily {
+    font-family: "Inter", "sans-serif";
+}
