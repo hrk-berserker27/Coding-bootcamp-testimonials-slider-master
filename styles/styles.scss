@@ -49,9 +49,9 @@
         @include d.flex(center, flex-start);
         padding-left: 0em;
         padding-top: 7.2em;
-        background-size: 97%;
-        background-position-x: 1.5em;
-        background-position-y: 3em;
+        background-size: 96%;
+        background-position-x: 1.7em;
+        background-position-y: 3.3em;
 
     }
 
@@ -128,6 +128,7 @@ main {
             padding-left: 5em;
             padding-top: 3.5em;
             pointer-events: none !important;
+            @include d.fontWeightSelector(map-get(d.$font-weight, "weight-1"));
 
             &:hover {
                 border: 2px solid;
@@ -169,7 +170,7 @@ main {
                 display: flex;
                 width: 100%;
                 align-items: center;
-                gap: 0.5em;
+                gap: 0.2em;
             }
 
             .writer {
