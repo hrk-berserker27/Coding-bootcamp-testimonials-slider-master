@@ -10,7 +10,19 @@
 .image-container {
     width: 254px;
     height: 252px;
-    position: relative; //-> to make the layout property on Image component work we need mention this property on the parent element of the Image component
+    position: relative;
+
+    //-> to make the layout property on Image component work we need mention this property on the parent element of the Image component
+    img {
+        border-radius: 10px;
+    }
+
+    @media (min-width: 1240px) {
+        width: 75%;
+        height: 78.5%;
+
+
+    }
 }
 
 .hero-section {
@@ -19,22 +31,48 @@
     padding: 2em;
     @include d.flex(center, center);
     background: url(../public/images/pattern-bg.svg);
-    background-size: 86%;
-    background-position-x: 1.8em;
-    background-position-y: -0.4em;
+    background-size: 86.5%;
+    background-position-x: 1.65em;
+    background-position-y: 0.1em;
     background-repeat: no-repeat;
-    height: 305px;
-    padding-top: 1.7em;
+    height: 310px;
+    padding-top: 2.4em;
+
+
+    @media (min-width: 1240px) {
+        height: 100vh;
+        position: absolute;
+        width: 50vw;
+        left: 45%;
+        z-index: -1;
+        padding: 0;
+        @include d.flex(center, flex-start);
+        padding-left: 0em;
+        padding-top: 7.2em;
+        background-size: 97%;
+        background-position-x: 1.5em;
+        background-position-y: 3em;
+
+    }
 
     .slider-container {
         position: absolute;
-        top: 83%;
+        top: 85%;
         left: calc(50% - 2.5em);
         width: 5em;
         height: 2.6em;
         border-radius: 2em;
         @include d.flex(center, center);
         overflow: hidden;
+        box-shadow: 0px 0px 100px 10px hsl(240, 38%, 20%);
+
+        @media (min-width: 1240px) {
+            width: 7em;
+            height: 3.5em;
+            top: 78%;
+            left: 20.7%;
+            pointer-events: all;
+        }
 
         button {
             height: 100%;
@@ -42,6 +80,10 @@
             position: relative;
             background-color: white;
             border: none;
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }
@@ -52,12 +94,21 @@ main {
     max-width: 100vw;
     @include d.flex(flex-end, center, column);
     flex-flow: column-reverse;
-    gap: 2em;
-    padding-top: 2em;
+    gap: 2.3em;
+    padding-top: 1.5em;
     background: url(../public/images/pattern-curve.svg);
     background-size: 75%;
     background-repeat: no-repeat;
     background-position-y: bottom;
+
+    @media (min-width: 1200px) {
+        @include d.flex(flex-start, center, row);
+        flex-flow: row;
+        background-size: 43%;
+        gap: 0em;
+        padding-top: 0;
+        isolation: isolate; //This fixed the issue with hover effect on slider button
+    }
 
     .content-section {
         width: 100%;
@@ -68,10 +119,35 @@ main {
         gap: 1.1em;
         font-size: 1.1rem;
 
+        @media (min-width: 1240px) {
+            width: 100%;
+            font-size: 32px;
+            line-height: 45px;
+            text-align: left;
+            @include d.flex(flex-start, flex-start, column);
+            padding-left: 5em;
+            padding-top: 3.5em;
+            pointer-events: none !important;
+
+            &:hover {
+                border: 2px solid;
+            }
+        }
+
         .review {
             color: map-get(d.$color-bucket, "Dark_Blue");
             width: 28ch;
             position: relative;
+
+            @media (min-width: 1240px) {
+                width: 37ch;
+                padding-top: 0em;
+                padding-left: 5px;
+                padding-right: 3em;
+                letter-spacing: -0.0065em;
+                padding-top: 0px;
+                pointer-events: none;
+            }
 
             &::before {
                 content: url(../public/images/pattern-quotes.svg);
@@ -79,10 +155,23 @@ main {
                 top: -15%;
                 left: 40%;
                 zoom: 50%;
+
+                @media (min-width: 1240px) {
+                    zoom: 100%;
+                    top: -30%;
+                    left: 13%;
+                }
             }
         }
 
         .writer-container {
+            @media(min-width: 1240px) {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                gap: 0.5em;
+            }
+
             .writer {
                 @include d.fontWeightSelector(map-get(d.$font-weight, "weight-3"));
                 color: map-get(d.$color-bucket, "Dark_Blue");

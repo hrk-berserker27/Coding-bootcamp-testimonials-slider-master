@@ -68,7 +68,7 @@ export default function App() {
         <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
       </Head>
       <main>
-        <div class="content-section">
+        <div className="content-section">
           <p className="review">
             <span className="quotes">“&nbsp;{setQuote()}&nbsp;”</span>
           </p>
