@@ -9,6 +9,7 @@ This is a solution to the [Coding bootcamp testimonials slider challenge on Fron
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
+  - [Folder structure](#folder-structure)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
   - [Continued development](#continued-development)
