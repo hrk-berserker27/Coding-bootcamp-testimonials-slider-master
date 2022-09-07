@@ -146,6 +146,7 @@ main {
             width: 80%;
             @include d.flex(flex-start, flex-start, column);
             font-size: 28px;
+            @include d.fontWeightSelector(map-get(d.$font-weight, "weight-2"));
         }
 
         @media (min-width: 1440px) {
@@ -158,6 +159,7 @@ main {
             padding-top: 3.5em;
             pointer-events: none !important;
             @include d.fontWeightSelector(map-get(d.$font-weight, "weight-1"));
+
 
             &:hover {
                 border: 2px solid;
